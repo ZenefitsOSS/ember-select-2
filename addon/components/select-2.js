@@ -38,7 +38,7 @@ var Select2Component = Ember.Component.extend({
   optionValuePath: null,
   optionLabelPath: 'text',
   optionLabelSelectedPath: null,
-  optionHeadlinePath: 'text',
+  optionHeadlinePath: null,
   optionDescriptionPath: 'description',
   optionCssClassPath: 'cssClass',
   placeholder: null,
@@ -71,7 +71,7 @@ var Select2Component = Ember.Component.extend({
         optionLabelPath = this.get('optionLabelPath'),
         optionCssClassPath = this.get('optionCssClassPath'),
         optionLabelSelectedPath = this.get('optionLabelSelectedPath'),
-        optionHeadlinePath = this.get('optionHeadlinePath'),
+        optionHeadlinePath = this.get('optionHeadlinePath') || this.get('optionLabelPath'),
         optionDescriptionPath = this.get('optionDescriptionPath'),
         content = this.get('content');
 
